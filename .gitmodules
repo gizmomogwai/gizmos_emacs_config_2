@@ -1,0 +1,3 @@
+[submodule ".emacs.d/submodules/el-get"]
+	path = .emacs.d/submodules/el-get
+	url = https://github.com/dimitri/el-get.git
