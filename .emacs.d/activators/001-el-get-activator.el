@@ -1,4 +1,4 @@
-(add-to-list 'load-path (concat emacs-d-dir "/submodules/el-get"))
+1(add-to-list 'load-path (concat emacs-d-dir "/submodules/el-get"))
 
 (require 'el-get)
 (setq el-get-sources
@@ -7,13 +7,23 @@
 	;point-stack
 	;ant
 	;haml-mode
-	magit
 	;undo-tree
-	;clojure-mode
         ;clojure-slime
-	zenburn-theme
+	;slime // does not compile
+	magit
+;	zenburn-theme
 	linum-ex
 	hlinum
+	paredit
+	parenface
+	clojure-mode
+	sr-speedbar
+	anything
+	smooth-scrolling
+	lusty-explorer
+	auto-complete
+	markdown-mode
+	el-expectations
 ))
 
 (el-get 'sync el-get-sources)

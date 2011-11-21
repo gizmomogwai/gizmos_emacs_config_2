@@ -8,13 +8,17 @@
  '(desktop-missing-file-warning nil)
  '(desktop-path (quote ("./.emacs" "~/.emacs.d/")))
  '(desktop-save-mode t)
+ '(fringe-mode 0 nil (fringe))
+ '(global-auto-revert-mode t)
  '(global-linum-mode t)
  '(kill-whole-line t)
  '(linum-format "%4d ")
  '(longlines-auto-wrap nil)
+ '(markdown-command "~/.homebrew/bin/markdown")
  '(ns-alternate-modifier (quote none))
  '(ns-command-modifier (quote meta))
  '(show-trailing-whitespace t)
+ '(speedbar-directory-unshown-regexp "^$'")
  '(tool-bar-mode nil)
  '(visible-bell t))
 (custom-set-faces
@@ -22,4 +26,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(wb-line-number-face ((default (:foreground "grey")) (nil nil)) t)
+ '(wb-line-number-scroll-bar-face ((t (:background "grey" :foreground "grey"))) t))
