@@ -1,4 +1,5 @@
-;(load-theme 'zenburn)
+(if (= emacs-major-version 24) (load-theme 'zenburn))
+
 (set-scroll-bar-mode nil)
 (setq frame-title-format
       '(:eval
