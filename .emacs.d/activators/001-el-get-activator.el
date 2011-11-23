@@ -21,7 +21,7 @@
 	smooth-scrolling
 	lusty-explorer
 	auto-complete
-	markdown-mode
+;	markdown-mode
 	el-expectations
 	toggle-friend-file
 	find-file-in-project
