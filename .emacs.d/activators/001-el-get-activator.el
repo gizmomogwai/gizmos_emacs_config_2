@@ -28,9 +28,14 @@
 ))
 
 (if (= emacs-major-version 24)
-(setq my-el-get-sources
-      (append
-       '(zenburn-theme)
-       (mapcar 'el-get-source-name el-get-sources))))
+    (setq my-el-get-sources
+	  (append
+	   '(zenburn-theme)
+	   (mapcar 'el-get-source-name el-get-sources))))
+(if (= emacs-major-version 23)
+    (setq my-el-get-sources
+	  (append
+	   '(color-theme color-theme-zenburn)
+	   (mapcar 'el-get-source-name el-get-sources))))
 
 (el-get 'sync my-el-get-sources)
