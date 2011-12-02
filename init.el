@@ -1,7 +1,34 @@
 (print "Hello World")
 (add-to-list 'load-path (file-name-directory load-file-name))
 
+
 (require 'el-expectations)
+
+(defgroup tff nil
+  "Toggle between Friend Files."
+  :group 'tff)
+
+(defcustom tff-extension-mapping
+  '(("cpp" "h")
+    ("h" "cpp")
+    ("haml" "yaml")
+    ("yaml" "haml"))
+  "mapping between file extensions"
+  :type '(repeat
+	  (list
+	   (string :tag "from")
+	   (string :tag "to")))
+  :group 'tff)
+
+(defcustom tff-path-mapping
+  '(("src" "include") 
+    ("include" "src"))
+  "replacements of file paths"
+  :type '(repeat
+	  (list
+	   (string :tag "from")
+	   (string :tag "to")))
+  :group 'tff)
 
 (defun tff-replace-extension
   (patterns input)
@@ -34,7 +61,7 @@
   "toggles between friend fiels (see tff customization group)"
   (interactive)
   (let* ((file-name (buffer-file-name))
-	 (new-file-name (tff-calc-file-name '(("cpp" "h")("h" "cpp")) '() file-name)))
+	 (new-file-name (tff-calc-file-name tff-extension-mapping tff-path-mapping file-name)))
     (if (not (string= file-name new-file-name)) (find-file new-file-name))))
 
 (expectations
