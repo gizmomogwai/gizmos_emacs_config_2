@@ -15,16 +15,20 @@
 (defun tff-replace-with-first-matching-regexp
   (patterns input)
   "iterates over patterns and return the regexp-replace of the first regexp-match"
-  (if (eq nil (first patterns)) input
+  (if (first patterns) 
     (let* ((pair (first patterns))
 	   (pattern (car pair))
-	   (repl (car (cdr pair))))
+	   (repl (car (cdr pair)))
 	   (replaced (replace-regexp-in-string pattern repl input))
-	  ; (finished (not (string= replaced input)))
-	   
-      replaced)))
-	   ;(if finished replaced (tff-replace-with-first-matching-regexp (rest patterns) input))
-  )))
+	   (finished (not (string= replaced input))))
+      (if finished replaced (tff-replace-with-first-matching-regexp (rest patterns) input))) 
+    input))
+
+(defun tff-calc-file-name
+  (ext-patterns regexp-patterns input)
+  "replaces the file-extension and the regexp-patterns"
+  (tff-replace-with-first-matching-regexp regexp-patterns (or (tff-replace-extension ext-patterns input) input)))
+
 (replace-regexp-in-string "include" "src" "/some/path/src/test")
 (first '(("cpp" "h")("rb" "rb")))
 (expectations
@@ -34,6 +38,14 @@
   (expect "test.yaml" (tff-replace-extension '(("cpp" "h")("rb" "yaml")) "test.rb"))
 
   (desc "replace with first matching regexp")
-  (expect "/some/path/src/test" (tff-replace-with-first-matching-regexp '(("include" "src")("src" "include")) "/some/path/include/test"))
+  (expect "/some/path/src/test" (tff-replace-with-first-matching-regexp '(("include" "src")) "/some/path/include/test"))
+  (desc "no replacement when no regexp matches")
+  (expect "/some/path/include/test" (tff-replace-with-first-matching-regexp '(("abc" "def")) "/some/path/include/test"))
+
+  (desc "combine extension and regex replacement")
+  (expect "/some/path/include/test.h" (tff-calc-file-name '(("cpp" "h")) '(("src" "include")) "/some/path/src/test.cpp"))
+  (desc "combine no extension match and regex replacement")
+  (expect "/some/path/include/test.cc" (tff-calc-file-name '(("cpp" "h")) '(("src" "include")) "/some/path/src/test.cc"))
+  (desc "combine extension match and no regex replacement")
+  (expect "/some/path/src/test.h" (tff-calc-file-name '(("cpp" "h")) '(("src2" "include")) "/some/path/src/test.cpp"))
   )
-      
