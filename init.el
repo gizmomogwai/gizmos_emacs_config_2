@@ -29,8 +29,14 @@
   "replaces the file-extension and the regexp-patterns"
   (tff-replace-with-first-matching-regexp regexp-patterns (or (tff-replace-extension ext-patterns input) input)))
 
-(replace-regexp-in-string "include" "src" "/some/path/src/test")
-(first '(("cpp" "h")("rb" "rb")))
+(defun tff
+  ()
+  "toggles between friend fiels (see tff customization group)"
+  (interactive)
+  (let* ((file-name (buffer-file-name))
+	 (new-file-name (tff-calc-file-name '(("cpp" "h")("h" "cpp")) '() file-name)))
+    (if (not (string= file-name new-file-name)) (find-file new-file-name))))
+
 (expectations
   (desc "nil when no matching extension")
   (expect nil (tff-replace-extension '(("cpp" "h")) "test.rb"))
