@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.8101934"
-     inkscape:cx="15796.482"
-     inkscape:cy="12132.927"
+     inkscape:zoom="0.45254835"
+     inkscape:cx="15791.985"
+     inkscape:cy="11030.113"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="mm"
@@ -988,6 +988,11 @@
          sodipodi:role="line"
          x="15851.053"
          y="-9915.6797"
+         style="font-size:40px"
+         id="tspan3157">  - dir-locals.el</tspan><tspan
+         sodipodi:role="line"
+         x="15851.053"
+         y="-9865.6797"
          style="font-size:40px"
          id="tspan3380-9" /></text>
     <text
