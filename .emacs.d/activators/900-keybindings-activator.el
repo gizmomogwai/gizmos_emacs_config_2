@@ -1,5 +1,5 @@
 ;; place keybindings here
-(global-set-key (kbd "C-1") 'toggle-friend-file)
+(global-set-key (kbd "C-1") 'tff)
 (global-set-key [(ctrl tab)] 'dabbrev-expand)
 (global-set-key (kbd "M-s") 'sr-speedbar-toggle)
 (global-set-key (kbd "M-y") 'anything-show-kill-ring)
