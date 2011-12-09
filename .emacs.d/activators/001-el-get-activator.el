@@ -2,12 +2,12 @@
 
 (require 'el-get)
 (setq el-get-sources
-      '(;yasnippet
-	;rainbow-mode
+      '(;rainbow-mode
 	;point-stack
 	;ant
 	;haml-mode
-	;undo-tree
+	yasnippet
+	undo-tree
         ;clojure-slime
 	;slime // does not compile
 	magit
