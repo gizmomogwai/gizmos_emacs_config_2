@@ -6,7 +6,7 @@
 (global-set-key (kbd "C-c C-f") 'find-file)
 (global-set-key (kbd "C-x C-f") 'lusty-file-explorer)
 (global-set-key (kbd "C-x C-b") 'lusty-buffer-explorer)
-(global-set-key (kbd "C-x C-a") 'anything)
+(global-set-key (kbd "C-S-a") 'anything)
 (global-set-key (kbd "M-R") 'find-file-in-project)
 ;(global-set-key (kbd "C-c y") '(lambda ()
 ;                          	(interactive)

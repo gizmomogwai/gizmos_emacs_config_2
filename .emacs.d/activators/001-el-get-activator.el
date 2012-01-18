@@ -3,14 +3,16 @@
 (require 'el-get)
 (setq el-get-sources
       '(;rainbow-mode
-	;point-stack
+	point-stack
 	;ant
-	;haml-mode
+	haml-mode
 	yasnippet
 	undo-tree
         ;clojure-slime
 	;slime // does not compile
-	magit
+	; magit
+	egg
+	git-blame
 	linum-ex
 	hlinum
 	paredit
@@ -21,10 +23,13 @@
 	smooth-scrolling
 	lusty-explorer
 	auto-complete
-;	markdown-mode
+	markdown-mode
+	zencoding-mode
 	el-expectations
 	toggle-friend-file
 	find-file-in-project
+	lua-mode
+	org-mode
 ))
 
 (if (= emacs-major-version 24)
