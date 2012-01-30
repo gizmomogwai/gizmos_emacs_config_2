@@ -17,6 +17,7 @@
  '(global-highlight-changes-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
+ '(gnus-home-directory "~/.emacs.d/gnus")
  '(highlight-changes-visibility-initial-state nil)
  '(kept-new-versions 6)
  '(kill-whole-line t)

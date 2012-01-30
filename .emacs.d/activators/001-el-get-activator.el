@@ -30,6 +30,7 @@
 	find-file-in-project
 	lua-mode
 	org-mode
+	wrap-region
 ))
 
 (if (= emacs-major-version 24)
