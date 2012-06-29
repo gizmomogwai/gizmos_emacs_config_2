@@ -1,11 +1,13 @@
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ack-executable (executable-find "ack-grep"))
+ '(auto-save-list-file-prefix "~/.emacs-auto-save-list/.saves-")
  '(backup-by-copying t)
  '(backup-directory-alist (quote ((".*" . "~/.emacs-backups"))))
- '(custom-safe-themes (quote ("9cdf9fb94f560902b567b73f65c2ed4e5cfbaafe" default)))
+ '(custom-safe-themes (quote ("d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default)))
  '(delete-old-versions t)
  '(desktop-base-file-name "~/.emacs.desktop")
  '(desktop-lazy-verbose nil)
@@ -17,7 +19,7 @@
  '(global-highlight-changes-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
- '(gnus-home-directory "~/.emacs.d/gnus")
+ '(gnus-extra-headers (quote (To Cc Keywords Gcc Newsgroups BCc)))
  '(highlight-changes-visibility-initial-state nil)
  '(kept-new-versions 6)
  '(kill-whole-line t)
@@ -26,23 +28,29 @@
  '(markdown-command "~/.homebrew/bin/markdown")
  '(ns-alternate-modifier (quote none))
  '(ns-command-modifier (quote meta))
- '(org-agenda-files (quote ("~/Dropbox/Documents/_projects/org")))
+ '(org-agenda-files (quote ("~/Dropbox/Documents/_projects/org/private" "~/Dropbox/Documents/_projects/org/professional")))
  '(org-directory "~/Dropbox/Documents/_projects/org")
  '(org-mobile-directory "~/Dropbox/Documents/_projects/org/mobile")
  '(org-mobile-inbox-for-pull "~/Dropbox/Documents/_projects/from-mobile.org")
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-id org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m)))
+ '(org-startup-indented t)
  '(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("elpa" . "http://tromey.com/elpa/") ("marmalade" . "http://marmalade-repo.org/packages/"))))
  '(recentf-mode t)
+ '(safe-local-variable-values (quote ((eval ignore-errors "Write-contents-functions is a buffer-local alternative to before-save-hook" (add-hook (quote write-contents-functions) (lambda nil (delete-trailing-whitespace) nil)) (require (quote whitespace)) "Sometimes the mode needs to be toggled off and on." (whitespace-mode 0) (whitespace-mode 1)) (whitespace-line-column . 80) (whitespace-style face trailing lines-tail) (require-final-newline . t) (c-offsets-alist (topmost-intro . -) (arglist-intro . ++) (arglist-cont-nonempty . ++) (member-init-intro . +) (defun-block-intro . +) (statement-block-intro . +) (template-args-cont c-lineup-template-args ++) (case-label . +) (statement-case-intro . +) (statement-cont . +)))))
  '(show-trailing-whitespace t)
  '(speedbar-directory-unshown-regexp "^$'")
  '(tool-bar-mode nil)
+ '(tramp-adb-prompt "^.* $ ")
+ '(tramp-adb-sdk-dir "~/bin/android-sdk")
  '(visible-bell t)
- '(yas/global-mode t nil (yasnippet)))
+ '(warning-suppress-types (quote ((\(undo\ discard-info\)))))
+ '(yas/global-mode t nil (yasnippet))
+ '(yas/snippet-dirs (quote ("~/.emacs.d/snippets" "~/.emacs.d/el-get/yasnippet/snippets")) nil (yasnippet)))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(highlight-changes ((t (:background "red1"))))
  '(wb-line-number-face ((default (:foreground "grey")) (nil nil)) t)
  '(wb-line-number-scroll-bar-face ((t (:background "grey" :foreground "grey"))) t))

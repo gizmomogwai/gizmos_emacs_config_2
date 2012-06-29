@@ -11,3 +11,4 @@
 ;(global-set-key (kbd "C-c y") '(lambda ()
 ;                          	(interactive)
 ;				(popup-menu 'yank-menu)))
+(global-set-key (kbd "C-0") 'ace-jump-mode)

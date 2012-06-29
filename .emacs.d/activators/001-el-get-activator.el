@@ -2,23 +2,23 @@
 
 (require 'el-get)
 (setq el-get-sources
-      '(;rainbow-mode
+      '(
+      	rainbow-mode
 	point-stack
-	;ant
+	; ant
 	haml-mode
 	yasnippet
 	undo-tree
-        ;clojure-slime
-	;slime // does not compile
-	; magit
+        ;; clojure-slime
+	;; slime // does not compile
 	egg
 	git-blame
 	linum-ex
 	hlinum
 	paredit
 	parenface
-	clojure-mode
-	sr-speedbar
+	;clojure-mode
+	;sr-speedbar
 	anything
 	smooth-scrolling
 	lusty-explorer
@@ -28,20 +28,19 @@
 	el-expectations
 	toggle-friend-file
 	find-file-in-project
-	lua-mode
+	;lua-mode
 	org-mode
 	wrap-region
+	highlight-indentation
+;	;haskellmode-emacs
+;	;rinari
+;	;full-ack
+	ace-jump-mode
+	d-mode
+	doxymacs
+	zenburn-theme
+	tramp-adb
+	json
 ))
 
-(if (= emacs-major-version 24)
-    (setq my-el-get-sources
-	  (append
-	   '(zenburn-theme)
-	   (mapcar 'el-get-source-name el-get-sources))))
-(if (= emacs-major-version 23)
-    (setq my-el-get-sources
-	  (append
-	   '(color-theme color-theme-zenburn)
-	   (mapcar 'el-get-source-name el-get-sources))))
-
-(el-get 'sync my-el-get-sources)
+(el-get 'sync el-get-sources)
