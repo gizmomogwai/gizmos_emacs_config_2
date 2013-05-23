@@ -3,44 +3,23 @@
 (require 'el-get)
 (setq el-get-sources
       '(
-      	rainbow-mode
-	point-stack
-	; ant
-	haml-mode
+	zenburn-theme
+	anything
 	yasnippet
 	undo-tree
-        ;; clojure-slime
-	;; slime // does not compile
-	egg
-	git-blame
-	linum-ex
-	hlinum
-	paredit
-	parenface
-	;clojure-mode
-	;sr-speedbar
-	anything
-	smooth-scrolling
-	lusty-explorer
-	auto-complete
-	markdown-mode
-	zencoding-mode
-	el-expectations
-	toggle-friend-file
-	find-file-in-project
-	;lua-mode
-	org-mode
-	wrap-region
-	highlight-indentation
-;	;haskellmode-emacs
-;	;rinari
-;	;full-ack
-	ace-jump-mode
-	d-mode
-	doxymacs
-	zenburn-theme
-	tramp-adb
+        tff
+	magit
+	ert-expectations
+        multiple-cursors
+        expand-region
+        dired+
+        org-mode
 	json
+        highlight-parentheses
+	paredit
+        s
+        dash
+        projectile
 ))
 
 (el-get 'sync el-get-sources)

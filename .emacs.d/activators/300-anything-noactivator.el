@@ -9,7 +9,7 @@
       '(
 	anything-c-source-kill-ring
 	anything-c-source-buffers
-;	anything-c-source-file-name-history
+	anything-c-source-file-name-history
 ;	anything-c-source-info-pages
 ;	anything-c-source-info-elisp
 ;	anything-c-source-man-pages

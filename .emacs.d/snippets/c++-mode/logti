@@ -1,0 +1,4 @@
+# name: LOG_T_I(
+# key: logti
+# --
+LOG_T_I("%s:%d - ${1:message}:${2:additionalFormat}", __FILE__, __LINE__, ${3:parameters});
