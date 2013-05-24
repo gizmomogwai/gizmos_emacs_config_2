@@ -1,6 +1,1 @@
-el-get
-elpa
-.emacs.d/.emacs.desktop
-.emacs.d/.emacs.desktop.lock
-.emacs.d/ac-comphist.dat
-*~
+.DS_Store
