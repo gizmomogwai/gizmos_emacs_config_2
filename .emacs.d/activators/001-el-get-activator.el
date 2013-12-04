@@ -1,5 +1,8 @@
 (add-to-list 'load-path (concat emacs-d-dir "/submodules/el-get"))
 
+;(defun ac-common-setup ()
+;  (setq ac-sources (append ac-sources '(ac-source-dictionary))))
+
 (require 'el-get)
 (setq el-get-sources
       '(
@@ -8,6 +11,7 @@
 	yasnippet
 	undo-tree
         tff
+	git-modes
 	magit
 	ert-expectations
         multiple-cursors
@@ -19,7 +23,14 @@
 	paredit
         s
         dash
+        flx
         projectile
+        smooth-scrolling
+        auto-complete
+        flymake
+        diminish
+        xcscope
+        d-mode
 ))
 
 (el-get 'sync el-get-sources)

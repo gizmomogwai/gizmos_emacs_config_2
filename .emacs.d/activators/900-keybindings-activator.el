@@ -12,3 +12,4 @@
 ;                          	(interactive)
 ;				(popup-menu 'yank-menu)))
 (global-set-key (kbd "C-0") 'ace-jump-mode)
+(global-set-key (kbd "<f10>") 'org-capture)
