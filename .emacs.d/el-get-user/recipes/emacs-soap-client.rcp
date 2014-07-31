@@ -1,0 +1,5 @@
+(:name emacs-soap-client
+       :description "Acces SOAP web services from Emacs"
+       :type hg
+       :url "https://code.google.com/p/emacs-soap-client"
+       :shallow nil)

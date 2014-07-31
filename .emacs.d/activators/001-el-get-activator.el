@@ -1,36 +1,50 @@
-(add-to-list 'load-path (concat emacs-d-dir "/submodules/el-get"))
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-;(defun ac-common-setup ()
-;  (setq ac-sources (append ac-sources '(ac-source-dictionary))))
-
-(require 'el-get)
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+                                        ;(setq el-get-verbose t)
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(setq el-get-user-package-directory "~/.emacs.d/el-get-user/init")
 (setq el-get-sources
       '(
-	zenburn-theme
-	anything
-	yasnippet
-	undo-tree
+        el-get
+        color-theme-zenburn
+        anything
+        yasnippet
+        undo-tree
         tff
-	git-modes
-	magit
-	ert-expectations
+        magit
+        ert-expectations
         multiple-cursors
         expand-region
         dired+
         org-mode
-	json
-        highlight-parentheses
-	paredit
+        ;;	json
+        ;;        highlight-parentheses
+        ;;	paredit
         s
         dash
         flx
         projectile
-        smooth-scrolling
+        ;;        smooth-scrolling
         auto-complete
-        flymake
+        ;;        flymake
         diminish
-        xcscope
-        d-mode
-))
+        calfw
+                                        ;        howm
+        emacs-soap-client
+        org-jira
+        ;;        xcscope
+        ;;        smartparens
+        ace-jump-mode
+        key-chord
+        org-reveal
+                                        ;        helm
+        ))
+
 
 (el-get 'sync el-get-sources)

@@ -1,6 +1,3 @@
-[submodule ".emacs.d/submodules/el-get"]
-	path = .emacs.d/submodules/el-get
-	url = https://github.com/dimitri/el-get.git
 [submodule ".emacs.d/submodules/emacs-clang-complete-async"]
 	path = .emacs.d/submodules/emacs-clang-complete-async
 	url = git@github.com:Golevka/emacs-clang-complete-async.git

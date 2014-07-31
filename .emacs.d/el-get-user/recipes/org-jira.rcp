@@ -1,0 +1,5 @@
+(:name org-jira
+       :description "Bring Jira and OrgMode together"
+       :type git
+       :url "https://github.com/baohaojun/org-jira.git"
+       :shallow nil)
