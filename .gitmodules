@@ -1,3 +1,0 @@
-[submodule ".emacs.d/submodules/emacs-clang-complete-async"]
-	path = .emacs.d/submodules/emacs-clang-complete-async
-	url = git@github.com:Golevka/emacs-clang-complete-async.git
