@@ -48,4 +48,5 @@
         ;; org-reveal
         ))
 
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (el-get 'sync el-get-sources)
