@@ -13,4 +13,5 @@
 (key-chord-define-global "bw" 'save-buffer)
 (key-chord-define-global "bm" 'helm-buffers-list)
 (key-chord-define-global "GG" 'goto-line)
+(key-chord-define-global "br" 'kill-buffer)
 (key-chord-mode +1)

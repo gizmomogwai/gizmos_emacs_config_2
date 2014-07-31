@@ -2,3 +2,10 @@
 projectile.cache
 nohup.out
 *.elc
+.cask
+auto-save-list
+elpa
+xkcd
+*#*
+*~*
+*.elc
