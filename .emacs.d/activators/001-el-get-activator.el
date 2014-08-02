@@ -10,10 +10,12 @@
 (setq el-get-user-package-directory "~/.emacs.d/el-get-user/init")
 (setq el-get-sources
       '(
+        ;; base
         el-get
         color-theme-zenburn
         helm
 
+        ;; editor features
         hungry-delete
         key-chord
         powerline
@@ -25,17 +27,20 @@
         flycheck
         projectile
         multiple-cursors
+        dired+
 
-        json
+        ;; bigger ones
         magit
         git-timemachine
         org-mode
-        dired+
 
+        ;; coding
         ert-expectations
         paredit
         s
         dash
+                                        ; json
+        ;; not needed
         ;; smooth-scrolling
         ;; auto-complete
         ;; calfw

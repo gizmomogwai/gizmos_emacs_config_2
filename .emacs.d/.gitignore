@@ -10,3 +10,5 @@ xkcd
 *~*
 *.elc
 *.lock
+url
+image-dired
