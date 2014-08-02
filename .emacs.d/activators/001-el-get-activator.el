@@ -6,45 +6,46 @@
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
-                                        ;(setq el-get-verbose t)
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (setq el-get-user-package-directory "~/.emacs.d/el-get-user/init")
 (setq el-get-sources
       '(
         el-get
         color-theme-zenburn
-        anything
+        helm
+
+        hungry-delete
+        key-chord
+        powerline
+        highlight-parentheses
         yasnippet
         undo-tree
-        tff
-        magit
-        ert-expectations
-        multiple-cursors
         expand-region
-        dired+
+        tff
+        flycheck
+        projectile
+        multiple-cursors
+
+        json
+        magit
+        git-timemachine
         org-mode
-        ;;	json
-        ;;        highlight-parentheses
-        ;;	paredit
+        dired+
+
+        ert-expectations
+        paredit
         s
         dash
-        flx
-        projectile
-        ;;        smooth-scrolling
-        auto-complete
-        ;;        flymake
-        diminish
-        calfw
-                                        ;        howm
-        emacs-soap-client
-        org-jira
-        ;;        xcscope
-        ;;        smartparens
-        ace-jump-mode
-        key-chord
-        org-reveal
-                                        ;        helm
+        ;; smooth-scrolling
+        ;; auto-complete
+        ;; calfw
+        ;; howm
+        ;; emacs-soap-client
+        ;; org-jira
+        ;; xcscope
+        ;; smartparens
+        ;; ace-jump-mode
+        ;; org-reveal
         ))
-
 
 (el-get 'sync el-get-sources)

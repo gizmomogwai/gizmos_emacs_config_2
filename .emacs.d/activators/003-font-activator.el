@@ -4,5 +4,3 @@
     :family "Bitstream Vera Sans Mono" :height 145 :weight 'normal)
 )
 ; (eq system-type 'darwin)
-
-(load-theme 'zenburn)

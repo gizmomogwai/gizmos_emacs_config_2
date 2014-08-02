@@ -11,7 +11,7 @@
  '(cscope-program "~/bin/cscope")
  '(custom-safe-themes
    (quote
-    ("dc2ae53baca6dabf168ddc038e3c5add1a34a1947087e778e9d14f0e2d4b89a2" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default)))
+    ("3c9d994e18db86ae397d077b6324bfdc445ecc7dc81bb9d528cd9bba08c1dac1" "dc2ae53baca6dabf168ddc038e3c5add1a34a1947087e778e9d14f0e2d4b89a2" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default)))
  '(delete-old-versions t)
  '(desktop-lazy-idle-delay 1)
  '(desktop-restore-eager 1)
@@ -21,6 +21,8 @@
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(howm-directory "~/Dropbox/Document/_projects/howm/")
+ '(ido-enable-flex-matching t)
+ '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(kept-new-versions 5)
@@ -64,6 +66,7 @@
      (nil :maxlevel . 9))))
  '(org-refile-use-outline-path t)
  '(org-startup-indented t)
+ '(projectile-completion-system (quote ido))
  '(projectile-enable-caching t)
  '(projectile-global-mode t)
  '(projectile-use-native-indexing t)
