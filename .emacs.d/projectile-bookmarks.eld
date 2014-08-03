@@ -1,1 +1,1 @@
-("~/.homebrew/" "~/Dropbox/Documents/_projects/" "~/Dropbox/Documents/_projects/jep/")
+("~/Dropbox/Documents/_projects/" "~/.homebrew/" "~/Dropbox/Documents/_projects/jep/")
