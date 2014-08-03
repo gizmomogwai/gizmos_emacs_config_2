@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: emacs lisp header
+# key: h
+# binding: direct-keybinding
+# --
+;;; ${1:`(current-buffer)`} --- ${2}
+;;; Commentary:
+;;; Code:
+

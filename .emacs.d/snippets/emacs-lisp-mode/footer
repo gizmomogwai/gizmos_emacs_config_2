@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ;;; ... ends here
+# key: f
+# binding: direct-keybinding
+# --
+;;; ${1:`(current-buffer)`} ends here

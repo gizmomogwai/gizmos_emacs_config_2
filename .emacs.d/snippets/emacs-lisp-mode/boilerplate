@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: emacs lisp boilerplate
+# key: b
+# binding: direct-keybinding
+# --
+;;; ${1:`(current-buffer)`} --- ${2:Comment}
+;;; Commentary:
+;;; Code:
+$3
+(provide '${1:$(string-remove-suffix ".el" yas-text)})
+;;; $1 ends here

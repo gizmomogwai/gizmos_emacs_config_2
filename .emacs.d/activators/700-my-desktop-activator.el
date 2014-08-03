@@ -1,14 +1,18 @@
+;;; 700-my-desktop-activator.el --- desktop management
+;;; Commentary:
+;;; Code:
+
 (require 'desktop)
 
 (defvar my-desktop-session-dir
   (concat (getenv "HOME") "/.emacs.d/desktop-sessions/")
-  "*Directory to save desktop sessions in")
+  "Directory to save desktop sessions in.")
 
 (defvar my-desktop-session-name-hist nil
-  "Desktop session name history")
+  "Desktop session name history.")
 
 (defun my-desktop-save (&optional name)
-  "Save desktop by name."
+  "Save desktop by NAME."
   (interactive)
   (unless name
     (setq name (my-desktop-get-session-name "Save session" t)))
@@ -24,7 +28,7 @@
   (setq desktop-dirname nil))
 
 (defun my-desktop-read (&optional name)
-  "Read desktop by name."
+  "Read desktop by NAME."
   (interactive)
   (unless name
     (setq name (my-desktop-get-session-name "Load session")))
@@ -33,7 +37,7 @@
     (desktop-read (concat my-desktop-session-dir name))))
 
 (defun my-desktop-change (&optional name)
-  "Change desktops by name."
+  "Change desktops by NAME."
   (interactive)
   (let ((name (my-desktop-get-current-name)))
     (when name
@@ -56,7 +60,7 @@
         (file-name-nondirectory dirname)))))
 
 (defun my-desktop-get-session-name (prompt &optional use-default)
-  "Get a session name."
+  "Get a session name by asking with PROMPT.  USE-DEFAULT takes the current name."
   (let* ((default (and use-default (my-desktop-get-current-name)))
          (full-prompt (concat prompt (if default
                                          (concat " (default " default "): ")
@@ -66,7 +70,7 @@
                      nil nil nil my-desktop-session-name-hist default)))
 
 (defun my-desktop-kill-emacs-hook ()
-  "Save desktop before killing emacs."
+  "Save desktop before killing EMACS."
   (when (file-exists-p (concat my-desktop-session-dir "last-session"))
     (setq desktop-file-modtime
           (nth 5 (file-attributes (desktop-full-file-name (concat my-desktop-session-dir "last-session"))))))
@@ -74,3 +78,4 @@
 
 (add-hook 'kill-emacs-hook 'my-desktop-kill-emacs-hook)
 
+;;; 700-my-desktop-activator.el ends here

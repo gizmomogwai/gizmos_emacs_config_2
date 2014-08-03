@@ -17,6 +17,60 @@
  '(desktop-restore-eager 1)
  '(diary-file (concat emacs-d-dir "diary"))
  '(el-get-verbose t)
+ '(flycheck-mode-line
+   (quote
+    (" "
+     (:eval
+      (pcase flycheck-last-status-change
+        ((\` not-checked)
+         nil)
+        ((\` no-checker)
+         (propertize "-"
+                     (quote face)
+                     (quote warning)))
+        ((\` running)
+         (propertize "✷"
+                     (quote face)
+                     (quote success)))
+        ((\` errored)
+         (propertize "!"
+                     (quote face)
+                     (quote error)))
+        ((\` finished)
+         (let*
+             ((error-counts
+               (flycheck-count-errors flycheck-current-errors))
+              (no-errors
+               (cdr
+                (assq
+                 (quote error)
+                 error-counts)))
+              (no-warnings
+               (cdr
+                (assq
+                 (quote warning)
+                 error-counts)))
+              (face
+               (cond
+                (no-errors
+                 (quote error))
+                (no-warnings
+                 (quote warning))
+                (t
+                 (quote success)))))
+           (propertize
+            (format "%s/%s"
+                    (or no-errors 0)
+                    (or no-warnings 0))
+            (quote face)
+            face)))
+        ((\` interrupted)
+         "-")
+        ((\` suspicious)
+         (quote
+          (propertize "?"
+                      (quote face)
+                      (quote warning)))))))))
  '(global-auto-revert-mode t)
  '(global-flycheck-mode t nil (flycheck))
  '(global-hl-line-mode t)
@@ -71,6 +125,7 @@
  '(projectile-completion-system (quote ido))
  '(projectile-enable-caching t)
  '(projectile-global-mode t)
+ '(projectile-indexing-method (quote native))
  '(projectile-use-native-indexing t)
  '(safe-local-variable-values
    (quote

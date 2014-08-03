@@ -9,7 +9,6 @@
        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
-
 (require 'el-get-recipes)
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 (setq el-get-user-package-directory "~/.emacs.d/el-get-user/init")
@@ -45,6 +44,8 @@
          s
          dash
          company-mode
+
+         diminish ;; cleanup modeline of every loaded module
          )))
 
       (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
@@ -52,3 +53,4 @@
 
 (provide '001-el-get-activator)
 ;;; 001-el-get-activator.el ends here
+

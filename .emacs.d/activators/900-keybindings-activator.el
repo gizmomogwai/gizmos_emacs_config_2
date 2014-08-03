@@ -1,20 +1,16 @@
-;; place keybindings here
-(global-set-key (kbd "C-1") 'tff)
-(global-set-key [(ctrl tab)] 'dabbrev-expand)
-(global-set-key (kbd "M-s") 'sr-speedbar-toggle)
-(global-set-key (kbd "M-y") 'anything-show-kill-ring)
-;(global-set-key (kbd "C-c C-f") 'find-file)
-;(global-set-key (kbd "C-x C-f") 'lusty-file-explorer)
-;(global-set-key (kbd "C-x C-b") 'lusty-buffer-explorer)
-(global-set-key (kbd "C-S-a") 'anything)
-(global-set-key (kbd "M-R") 'find-file-in-project)
-;(global-set-key (kbd "C-c y") '(lambda ()
-;                          	(interactive)
-;				(popup-menu 'yank-menu)))
-(global-set-key (kbd "C-0") 'ace-jump-mode)
-(global-set-key (kbd "<f10>") 'org-capture)
-(global-set-key (kbd "C-S-a") 'beginning-of-buffer)
-;(setq x-alt-keysym 'meta)
+;;; 900-keybindings-activator.el --- my keybindings
+;;; Commentary:
+;;; Code:
 
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
+;; place keybindings here
+(global-set-key [(ctrl tab)] 'dabbrev-expand)
+(global-set-key (kbd "M-y") 'anything-show-kill-ring)
+(global-set-key (kbd "M-R") 'find-file-in-project)
+;;(global-set-key (kbd "C-c y") '(lambda ()
+;;                          	(interactive)
+;;				(popup-menu 'yank-menu)))
+;;(global-set-key (kbd "C-0") 'ace-jump-mode)
+(global-set-key (kbd "<f10>") 'org-capture)
+                                        ;(setq x-alt-keysym 'meta)
+
+;;; 900-keybindings-activator.el ends here

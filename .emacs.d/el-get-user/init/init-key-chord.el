@@ -1,3 +1,6 @@
+;;; init-key-chord.el --- chords are nice
+;;; Commentary:
+;;; Code:
 (require 'key-chord)
 ;(key-chord-define-global "jj" 'ace-jump-word-mode)
 ;(key-chord-define-global "jl" 'ace-jump-line-mode)
@@ -17,3 +20,4 @@
 (key-chord-define-global "br" 'kill-buffer)
 (key-chord-define-global "MM" 'delete-other-windows)
 (key-chord-mode +1)
+;;; init-key-chord.el ends here
