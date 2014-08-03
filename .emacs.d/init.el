@@ -19,7 +19,8 @@
 
 (prefer-coding-system 'utf-8)
 (defvar emacs-d-dir (file-name-directory
-                     (or (buffer-file-name) load-file-name)) "The path to the EMACS config directory.")
+                     (or (buffer-file-name) load-file-name))
+  "The path to the EMACS config directory.")
 (let ((emacs-load-start (current-time)))
   (let ((activators-dir (concat emacs-d-dir "activators/")))
     (dolist (activator (directory-files activators-dir t ".*-activator.el$"))
