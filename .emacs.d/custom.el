@@ -11,12 +11,15 @@
  '(cscope-program "~/bin/cscope")
  '(custom-safe-themes
    (quote
-    ("3c9d994e18db86ae397d077b6324bfdc445ecc7dc81bb9d528cd9bba08c1dac1" "dc2ae53baca6dabf168ddc038e3c5add1a34a1947087e778e9d14f0e2d4b89a2" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default)))
+    ("3a727bdc09a7a141e58925258b6e873c65ccf393b2240c51553098ca93957723" "756597b162f1be60a12dbd52bab71d40d6a2845a3e3c2584c6573ee9c332a66e" "6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" "3c9d994e18db86ae397d077b6324bfdc445ecc7dc81bb9d528cd9bba08c1dac1" "dc2ae53baca6dabf168ddc038e3c5add1a34a1947087e778e9d14f0e2d4b89a2" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" default)))
  '(delete-old-versions t)
  '(desktop-lazy-idle-delay 1)
  '(desktop-restore-eager 1)
  '(diary-file (concat emacs-d-dir "diary"))
  '(el-get-verbose t)
+ '(fci-always-use-textual-rule t)
+ '(fci-rule-character 58)
+ '(fci-rule-color "#989898")
  '(flycheck-mode-line
    (quote
     (" "
@@ -72,15 +75,22 @@
                       (quote face)
                       (quote warning)))))))))
  '(global-auto-revert-mode t)
+ '(global-diff-hl-mode t)
  '(global-flycheck-mode t nil (flycheck))
+ '(global-git-gutter+-mode t)
  '(global-hl-line-mode t)
  '(global-linum-mode t)
  '(global-prettify-symbols-mode t)
+ '(grep-command "grep -nHri -e * ")
+ '(grep-highlight-matches (quote auto))
+ '(grep-scroll-output t)
+ '(helm-locate-command "$HOME/bin/glocate --database=$HOME/tmp/locatedb %s %s")
  '(howm-directory "~/Dropbox/Document/_projects/howm/")
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido))
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(initial-scratch-message "")
  '(kept-new-versions 5)
  '(kept-old-versions 5)
  '(kill-whole-line t)
@@ -127,6 +137,9 @@
  '(projectile-global-mode t)
  '(projectile-indexing-method (quote native))
  '(projectile-use-native-indexing t)
+ '(recentf-auto-cleanup (quote never))
+ '(recentf-filename-handlers (quote (abbreviate-file-name)))
+ '(recentf-mode t)
  '(safe-local-variable-values
    (quote
     ((eval progn

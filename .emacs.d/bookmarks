@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("ebay.org"
+ (filename . "~/Dropbox/Public/ebay/ebay.org")
+ (front-context-string . "#+TODO: TODO IN-")
+ (rear-context-string)
+ (position . 1))
+("001-el-get-activator.el"
+ (filename . "~/Dropbox/Documents/_projects/gizmos_emacs_config_2/.emacs.d/activators/001-el-get-activator.el")
+ (front-context-string . ";;; el-get-activ")
+ (rear-context-string)
+ (position . 1))
+("init.el"
+ (filename . "~/Dropbox/Documents/_projects/gizmos_emacs_config_2/.emacs.d/init.el")
+ (front-context-string . ";;; init --- My ")
+ (rear-context-string)
+ (position . 1))
+)

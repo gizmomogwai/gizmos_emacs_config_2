@@ -1,0 +1,17 @@
+* My Emacs Config
+- my config works on a set of activators
+- most of the heavy lifting is done with el-get and customize so these
+  activators are the most prominent ones
+- package specific code is put (most of the time) into init-package.el
+  files that are executed by el-get
+- as view as possible customizations are done outside of this system
+
+* Wishlist
+** email client
+** chat client
+** notifications
+* Packages to test
+** org-contacts
+** mu4e
+* Packages eliminated
+** rainbow mode -> did not work in osx?

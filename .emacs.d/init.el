@@ -3,7 +3,6 @@
 ;;; Code:
 
 (eval-when-compile (require 'cl))
-
 (defun format-duration (time)
   "Formats TIME as seconds and milliseconds."
   (format "%d.%ds" (car time) (cdr time)))
