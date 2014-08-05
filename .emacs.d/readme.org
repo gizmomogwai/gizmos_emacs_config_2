@@ -6,12 +6,21 @@
   files that are executed by el-get
 - as view as possible customizations are done outside of this system
 
+* Recent Additions
+** DONE helm-occur on C-s
+** DONE helm-for-file for C-x-f
+** DONE keychords as shortcuts
+** DONE using locate glocate for helm-locate
+** DONE correct font handline (also for new frames)
+
 * Wishlist
-** email client
-** chat client
-** notifications
+** TODO email client (propably mu4e)
+** TODO eshell
+** TODO chat client
+** TODO notifications
+** TODO helm semantic
 * Packages to test
-** org-contacts
-** mu4e
+** TODO org-contacts
+
 * Packages eliminated
-** rainbow mode -> did not work in osx?
+** DONE rainbow mode -> did not work in osx?
