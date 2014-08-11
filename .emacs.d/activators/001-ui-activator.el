@@ -1,8 +1,9 @@
 ;;; 101-ui-activator.el --- UI Tweaks
 ;;; Commentary:
 ;;; Code:
-(setq ns-use-srgb-colorspace nil)
-(set-scroll-bar-mode nil)
+(blink-cursor-mode -1)
+(set-scroll-bar-mode -1)
+(menu-bar-mode -1)
 (setq frame-title-format
       '(:eval
         (if buffer-file-name

@@ -2,6 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
 (eval-when-compile (require 'cl))
 (defun format-duration (time)
   "Formats TIME as seconds and milliseconds."
@@ -31,8 +35,6 @@
   (let ((since-start (time-diff (current-time) emacs-load-start)))
     (message "My .emacs loaded in %s" (format-duration since-start))))
 
-(put 'narrow-to-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
 (provide 'init)
 ;;; init.el ends here
 

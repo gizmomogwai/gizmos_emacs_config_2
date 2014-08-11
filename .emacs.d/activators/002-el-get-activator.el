@@ -1,6 +1,7 @@
-;;; el-get-activator ---- my el-get config
+;;; 002-el-get-activator.el --- my el-get config
 ;;; Commentary:
 ;;; Code:
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -21,35 +22,22 @@
          helm
 
          ;; editor features
-         hungry-delete
-         key-chord
-         powerline
-         highlight-parentheses
-         yasnippet
-         undo-tree
-         expand-region
-         tff
-         flycheck
-         projectile
-         multiple-cursors
-         dired+
+         hungry-delete key-chord powerline
+         highlight-parentheses yasnippet undo-tree
+         expand-region tff flycheck
+         projectile multiple-cursors dired+
 
          ;; bigger ones
-         magit
-         git-timemachine
-         diff-hl
-         org-mode
+         magit git-timemachine diff-hl
+         org-mode org-reveal
 
          ;; coding
-         ert-expectations
-         paredit
-         s
-         dash
-         company-mode
-         )))
+         ert-expectations paredit s dash company-mode litable
+
+         diminish
+	 )))
   (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
   (el-get 'sync el-get-sources))
 
-(provide '001-el-get-activator)
+(provide '002-el-get-activator)
 ;;; 002-el-get-activator.el ends here
-

@@ -44,8 +44,4 @@ point reaches the beginning or end of the buffer, stop there."
 (global-set-key [remap move-beginning-of-line]
                 'smarter-move-beginning-of-line)
 
-(run-at-time t 300 'recentf-save-list)
-
-(blink-cursor-mode -1)
-
 ;;; 901-snippets-activator.el ends here
